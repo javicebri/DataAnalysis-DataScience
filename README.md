@@ -1,5 +1,5 @@
 # dataAnalysis
-Data Analyst projects
+Data Analyst/Data Science projects and tools
 
 Topics covered:
 
