@@ -10,11 +10,11 @@ Topics covered:
       - SWAPI/Planet_population_distribution
     
     Maximum likelihood estimation:
-      - Real_experiment/Real_experiment_counting_cars_Exponential_Gamma_MLikelihood_and_nonparametric_test.ipynb 
+      - Experiment_With_Exponential_and_Gamma_Distributions/Real_experiment_counting_cars_Exponential_Gamma_MLikelihood_and_nonparametric_test.ipynb 
       - My_tools/maximum_likelihood_estimation.ipynb
       
     Nonparametric test:
-      - Real_experiment/Real_experiment_counting_cars_Exponential_Gamma_MLikelihood_and_nonparametric_test.ipynb    
+      - Experiment_With_Exponential_and_Gamma_Distributions/Real_experiment_counting_cars_Exponential_Gamma_MLikelihood_and_nonparametric_test.ipynb    
       - Astronomy/Kepler/Star_mass_distribution/stellar_mass_distribution_nonparametric_test_kolmogorov_smirnov.ipynb
       
     Correlation:
