@@ -1,5 +1,4 @@
-# dataAnalysis
-## Data Analyst/Data Science projects and tools
+# Data Analyst/Data Science projects and tools
 
 Projects are organized by thematic folder.
 My_tools folder contains my generic functions so I can use them when I need.
