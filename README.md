@@ -1,13 +1,13 @@
 # dataAnalysis
-Data Analyst/Data Science projects and tools
+## Data Analyst/Data Science projects and tools
 
 The projects are organized by thematic folder.
 My_tools folder contains my generic functions so I can use them when I need them.
 
-Topics covered:
+### Topics covered:
 
     API and JSON: 
-      - SWAPI/Planet_population_distribution
+      - [SWAPI/Planet_population_distribution](https://github.com/javicebri/DataAnalysis-DataScience/tree/main/SWAPI/Planet_population_distribution): It asks for the data on the Star Wars planets in an open API and shows the population percentage of the 5 most inhabited planets and groups the rest as 'other' in a pie chart. 
     
     Maximum likelihood estimation:
       - Experiment_With_Exponential_and_Gamma_Distributions/Real_experiment_counting_cars_Exponential_Gamma_MLikelihood_and_nonparametric_test.ipynb 
