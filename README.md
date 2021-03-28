@@ -5,6 +5,14 @@ My_tools folder contains my generic functions so I can use them when I need.
 
 ### Topics covered:
 
+#### Data transformation: 
+[DataAnalysis-DataScience/Padron_Madrid](https://github.com/javicebri/DataAnalysis-DataScience/tree/main/Padron_Madrid): In this notebook the data from the 2020 Madrid population census are crossed with the 2016 average income and the 2020 social services data. The purpose of the notebook is to show the work with the Pandas and Plotly libraries: 
+- Make groups (groupby)
+- Dataframe intersections (merge)
+- Data transformation (apply) and other operations
+- Plots (pie, stacked bar...)
+- Correlation
+___
 #### API and JSON: 
 [SWAPI/Planet_population_distribution](https://github.com/javicebri/DataAnalysis-DataScience/tree/main/SWAPI/Planet_population_distribution): It asks for the data on the Star Wars planets in an open API and shows the population percentage of the 5 most inhabited planets and groups the rest as 'other' in a pie chart. 
 ___
