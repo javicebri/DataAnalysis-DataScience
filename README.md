@@ -15,7 +15,13 @@ My_tools folder contains my generic functions so I can use them when I need.
 ___
 #### Classification, machine learning:
 [Classification_tools](https://github.com/javicebri/DataAnalysis-DataScience/tree/main/My_tools/Classification):
-Cheatsheet, this notebook has the basic code reference to: train, tune hyperparameters: (GridSearchCV, RandomSearchCV...), dummy classifier, evaluate: (accuracy, precision, recall, f1, report, ROC AUC and Precision-Recall Curves), visualize regions and data, (soon pipelines and cross validation)
+Cheatsheet, this notebook has the basic code reference to: 
+- Train 
+- Tune hyperparameters: (GridSearchCV, RandomSearchCV...)
+- Dummy classifier
+- Evaluation: (accuracy, precision, recall, f1, report, ROC AUC and Precision-Recall Curves with best threshold)
+- Visualize regions and data
+- (Soon pipelines and cross validation)
 
 ___
 #### Maximum likelihood estimation:
