@@ -21,7 +21,7 @@ Cheatsheet, this notebook has the basic code reference to:
 - Dummy classifier
 - Evaluation: (accuracy, precision, recall, f1, report, ROC AUC and Precision-Recall Curves with best threshold)
 - Visualize regions and data
-- (Soon pipelines and cross validation)
+- Pipelines and cross validation
 
 ___
 #### Maximum likelihood estimation:
