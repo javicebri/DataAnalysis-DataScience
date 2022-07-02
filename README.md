@@ -9,6 +9,10 @@ ___
 #### Optimization:
 [Linear programming](https://github.com/javicebri/DataAnalysis-DataScience/tree/main/My_tools/Optimization): 
 Linear programing: Continuous and MILP with Scipy and Pulp libraries.
+[Leontief optimization](https://github.com/javicebri/DataAnalysis-DataScience/tree/main/My_tools/Optimization): 
+- Introducion to input output economy models
+- Simulation of economy, plannig resources and excess of production.
+- Simulation of the economy with planning optmizaition of the input resources to achieve the excess of resources.
 
 #### Data transformation: 
 [DataAnalysis-DataScience/Padron_Madrid](https://github.com/javicebri/DataAnalysis-DataScience/tree/main/Padron_Madrid): In this notebook the data from the 2020 Madrid population census are crossed with the 2016 average income and the 2020 social services data. The purpose of the notebook is to show the work with the Pandas and Plotly libraries: 
