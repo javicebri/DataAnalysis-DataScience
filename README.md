@@ -14,7 +14,7 @@ My_tools folder contains my generic functions so I can use them when I need.
 - Correlation
 ___
 #### Optimization:
-[Experiment_With_Exponential_and_Gamma_Distributions](https://github.com/javicebri/DataAnalysis-DataScience/tree/main/My_tools/Optimization): 
+[Linear programming](https://github.com/javicebri/DataAnalysis-DataScience/tree/main/My_tools/Optimization): 
 Linear programing: Continuous and MILP with Scipy and Pulp libraries.
 ___
 #### Classification, machine learning:
