@@ -5,6 +5,11 @@ My_tools folder contains my generic functions so I can use them when I need.
 
 ### Topics covered:
 
+___
+#### Optimization:
+[Linear programming](https://github.com/javicebri/DataAnalysis-DataScience/tree/main/My_tools/Optimization): 
+Linear programing: Continuous and MILP with Scipy and Pulp libraries.
+
 #### Data transformation: 
 [DataAnalysis-DataScience/Padron_Madrid](https://github.com/javicebri/DataAnalysis-DataScience/tree/main/Padron_Madrid): In this notebook the data from the 2020 Madrid population census are crossed with the 2016 average income and the 2020 social services data. The purpose of the notebook is to show the work with the Pandas and Plotly libraries: 
 - Make groups (groupby)
@@ -12,10 +17,6 @@ My_tools folder contains my generic functions so I can use them when I need.
 - Data transformation (apply) and other operations
 - Plots (pie, stacked bar...)
 - Correlation
-___
-#### Optimization:
-[Linear programming](https://github.com/javicebri/DataAnalysis-DataScience/tree/main/My_tools/Optimization): 
-Linear programing: Continuous and MILP with Scipy and Pulp libraries.
 ___
 #### Classification, machine learning:
 [Classification_tools](https://github.com/javicebri/DataAnalysis-DataScience/tree/main/My_tools/Classification):
