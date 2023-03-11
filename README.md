@@ -56,4 +56,4 @@ ___
 #### Distributions:
 [001-Distributions](https://github.com/javicebri/DataAnalysis-DataScience/tree/main/Theory%20%26%20Practice/001-Distributions.ipynb): 
 - Bernoulli
-- Binomial with monte carlo
+- Binomial and Binomial with monte carlo 
