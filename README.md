@@ -52,5 +52,8 @@ ___
 #### Correlation:
 [Astronomy/Kepler/Correlation_orbital_period](https://github.com/javicebri/DataAnalysis-DataScience/tree/main/Astronomy/Kepler/Star_mass_distribution): 
 Exploration of data from the Kepler mission to search for exoplanets. Correlates the orbital period of exoplanets and searches with theoretical approximations.
- 
-    
+___
+#### Distributions:
+[001-Distribution](https://github.com/javicebri/DataAnalysis-DataScience/tree/main/Theory & Practice/001-Distributions): 
+- Bernoulli
+- Binomial with monte carlo
