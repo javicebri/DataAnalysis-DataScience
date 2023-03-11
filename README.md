@@ -54,6 +54,6 @@ ___
 Exploration of data from the Kepler mission to search for exoplanets. Correlates the orbital period of exoplanets and searches with theoretical approximations.
 ___
 #### Distributions:
-[001-Distribution](https://github.com/javicebri/DataAnalysis-DataScience/tree/main/Theory%20%26%20Practice/001-Distributions): 
+[001-Distributions](https://github.com/javicebri/DataAnalysis-DataScience/tree/main/Theory%20%26%20Practice/001-Distributions.ipynb): 
 - Bernoulli
 - Binomial with monte carlo
