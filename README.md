@@ -9,8 +9,10 @@ ___
 #### Optimization:
 [Explore convergence](https://github.com/javicebri/DataAnalysis-DataScience/blob/main/My_tools/Optimization/Optimization_explorer.ipynb): 
 Visualize the convergence of different types of algorithms.
-[Linear programming](https://github.com/javicebri/DataAnalysis-DataScience/tree/main/My_tools/Optimization/Programación%20lineal.ipynb): 
+
+[Linear programming](https://github.com/javicebri/DataAnalysis-DataScience/tree/main/My_tools/Optimization/Programación_lineal.ipynb): 
 Linear programing: Continuous and MILP with Scipy and Pulp libraries.
+
 [Leontief optimization](https://github.com/javicebri/DataAnalysis-DataScience/blob/main/My_tools/Optimization/Leontief%20optimization.ipynb): 
 - Introducion to input output economy models
 - Simulation of economy, plannig resources and excess of production.
