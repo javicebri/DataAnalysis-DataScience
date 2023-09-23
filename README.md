@@ -7,7 +7,7 @@ My_tools folder contains my generic functions so I can use them when I need.
 
 ___
 #### Optimization:
-[Explore convergence](https://github.com/javicebri/DataAnalysis-DataScience/tree/main/My_tools/Optimization): 
+[Explore convergence](https://github.com/javicebri/DataAnalysis-DataScience/blob/main/My_tools/Optimization/Optimization_explorer.ipynb): 
 Visualize the convergence of different types of algorithms.
 [Linear programming](https://github.com/javicebri/DataAnalysis-DataScience/tree/main/My_tools/Optimization): 
 Linear programing: Continuous and MILP with Scipy and Pulp libraries.
