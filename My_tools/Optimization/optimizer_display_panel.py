@@ -3,7 +3,7 @@ import holoviews as hv
 import pandas as pd
 import numpy as np
 from scipy.optimize import minimize
-from cerberus import Validator
+#from cerberus import Validator
 
 pn.extension()
 
@@ -51,13 +51,18 @@ class GraphApp:
         self.evaluation_arr = None
         self.function_expression = None
 
+    def read_limits(self):
+        self.lower_limit = self.lower_limit_input_widget.value
+        self.upper_limit = self.upper_limit_input_widget.value
+
+        if self.lower_limit == self.upper_limit:
+            self.text_widget.value = "Limits must have different values."
 
     def start_optimization(self, event):
         seed = 42
         np.random.seed(seed)
 
-        self.lower_limit = self.lower_limit_input_widget.value
-        self.upper_limit = self.upper_limit_input_widget.value
+        self.read_limits()
 
         self.x0 = np.random.uniform(self.lower_limit,
                                     self.upper_limit)
@@ -71,9 +76,7 @@ class GraphApp:
         else:
             self.function_expression = self.functions_dict[self.selected_option]
 
-
-
-        x = self.x # eval expression needs x value
+        x = self.x  # eval expression needs x value
         self.y = eval(self.function_expression)
 
         self.curve = self.plot_function()
@@ -136,7 +139,6 @@ class GraphApp:
         except Exception as error:
             self.text_widget.value = error
 
-
     def select_function(self, event):
         self.selected_option = event.obj.value
         self.text_widget.value = "Selected function is " + self.selected_option +\
@@ -145,12 +147,13 @@ class GraphApp:
         if self.selected_option == "Custom":
             self.custom_input_widget.visible = True
             self.check_function_button.visible = False
+        else:
+            self.custom_input_widget.visible = False
+            self.check_function_button.visible = False
 
         self.lower_limit_input_widget.visible = True
         self.upper_limit_input_widget.visible = True
         self.optimize_button.visible = True
-
-
 
     def advance_plot(self, event):
         if self.index < self.max_index:
