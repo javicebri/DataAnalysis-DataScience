@@ -12,26 +12,33 @@ class GraphApp:
     def __init__(self):
         self.index = 0  # Índice para el gráfico
         self.plot_pane = pn.pane.HoloViews()
-        self.optimize_button = pn.widgets.Button(name="Optimize", button_type="primary")
+
+        self.functions_dict = {'Cuadratic': 'x**2',
+                               'Mixed': '(np.sin(1/2 * x) + 2 * np.cos(1/2 * x)) * x**2'}
+        possible_functions_list = list(self.functions_dict.keys()) + ["Custom"]
+        self.select_widget = pn.widgets.Select(options=possible_functions_list,
+                                               name='Function')
+        self.select_widget.param.watch(self.select_function, "value")
+        self.selected_option = None
+
+        self.text_title = pn.pane.Markdown("# Optimizer Viewer", style={'font-size': '16pt'})
+        self.text_widget = pn.widgets.StaticText(name='Hint', value='')
+        self.text_widget.value = "Select the function."
+        self.text_index = pn.widgets.StaticText(value='', visible=False)
+        self.text_index.value = str(self.index)
+
+        self.custom_input_widget = pn.widgets.TextInput(name='Custom function', visible=False)
+        self.lower_limit_input_widget = pn.widgets.FloatInput(name='Lower limit', visible=False)
+        self.upper_limit_input_widget = pn.widgets.FloatInput(name='Upper limit', visible=False)
+        self.check_function_button = pn.widgets.Button(name="Validate", button_type="primary",
+                                                       visible=False, align="center")
+        self.check_function_button.on_click(self.check_function)
+        self.optimize_button = pn.widgets.Button(name="Optimize", button_type="primary", visible=False)
         self.optimize_button.on_click(self.start_optimization)
         self.advance_button = pn.widgets.Button(name="Advance >", button_type="primary", visible=False)
         self.advance_button.on_click(self.advance_plot)
         self.backward_button = pn.widgets.Button(name="< Backward", button_type="primary", visible=False)
         self.backward_button.on_click(self.backward_plot)
-
-        self.functions_dict = {'Cuadratic': 'x**2',
-                               'Mixed': '(np.sin(1/2 * x) + 2 * np.cos(1/2 * x)) * x**2'}
-        self.select_widget = pn.widgets.Select(options=list(self.functions_dict.keys()),
-                                               name='Function')
-        self.select_widget.param.watch(self.select_function, "value")
-        self.selected_option = None
-
-        self.text_widget = pn.widgets.StaticText(name='Selected option', value='')
-        self.text_index = pn.widgets.StaticText(value='', visible=False)
-        self.text_index.value = str(self.index)
-
-        self.lower_limit_input_widget = pn.widgets.FloatInput(name='Lower limit')
-        self.upper_limit_input_widget = pn.widgets.FloatInput(name='Upper limit')
 
         self.x = None
         self.x0 = None
@@ -58,7 +65,13 @@ class GraphApp:
                              self.upper_limit,
                              1000)
 
-        self.function_expression = self.functions_dict[self.selected_option]
+        if self.selected_option == "Custom":
+            self.function_expression = self.custom_input_widget.value
+            self.check_function()
+        else:
+            self.function_expression = self.functions_dict[self.selected_option]
+
+
 
         x = self.x # eval expression needs x value
         self.y = eval(self.function_expression)
@@ -116,9 +129,28 @@ class GraphApp:
         curve = hv.Curve((self.x, self.y)).opts(width=500, height=300)
         return curve
 
+    def check_function(self):
+        x = np.array([0, 1, 2])
+        try:
+            eval(self.function_expression)
+        except Exception as error:
+            self.text_widget.value = error
+
+
     def select_function(self, event):
         self.selected_option = event.obj.value
-        self.text_widget.value = event.obj.value
+        self.text_widget.value = "Selected function is " + self.selected_option +\
+                                 ". Now fix the limits."
+
+        if self.selected_option == "Custom":
+            self.custom_input_widget.visible = True
+            self.check_function_button.visible = False
+
+        self.lower_limit_input_widget.visible = True
+        self.upper_limit_input_widget.visible = True
+        self.optimize_button.visible = True
+
+
 
     def advance_plot(self, event):
         if self.index < self.max_index:
@@ -149,9 +181,11 @@ class GraphApp:
 
     def view(self):
         return pn.Column(
-
+            self.text_title,
             pn.Row(
                 pn.Column(self.select_widget,
+                          pn.Row(self.custom_input_widget,
+                                 self.check_function_button),
                           self.lower_limit_input_widget,
                           self.upper_limit_input_widget,
                           self.optimize_button,
@@ -168,4 +202,4 @@ class GraphApp:
 
 app = GraphApp()
 # Abrir la aplicación en el navegador predeterminado
-app.view().servable()
+app.view().servable(title="Optimization Viewer")
